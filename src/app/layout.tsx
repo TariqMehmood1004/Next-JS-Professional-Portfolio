@@ -3,11 +3,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
-import { HeroUIProvider, Link } from "@heroui/react";
+import { HeroUIProvider } from "@heroui/react";
 import { useEffect, useState } from "react";
 import Loader from "@/app/loading";
 import ThemeProvider from "@/Components/ThemeProvider";
-import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,7 +44,7 @@ export default function RootLayout({
         <link rel="icon" href="/Portfolio.png" sizes="any" />
       </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased px-5 md:px-0`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased px-5 md:px-0 overflow-x-hidden`}
       >
         <ThemeProvider>
           <HeroUIProvider>
