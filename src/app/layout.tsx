@@ -4,7 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import { HeroUIProvider } from "@heroui/react";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Loader from "@/app/loading";
 import ThemeProvider from "@/Components/ThemeProvider";
 

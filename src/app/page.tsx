@@ -1,10 +1,7 @@
 "use client";
 
 import DownRightArrowIcon from "@/Components/Icons/DownRightArrowIcon";
-import ZapBulkIcon from "@/Components/Icons/ZapBulkIcon";
-import ZapIcon from "@/Components/Icons/ZapIcon";
 import ThemeSwitcher from "@/Components/ThemeToggleButton";
-import { Button } from "@heroui/react";
 
 export default function Home() {
   return (
