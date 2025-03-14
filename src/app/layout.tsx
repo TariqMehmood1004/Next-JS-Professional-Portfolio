@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
+"use client"; // 👈 Forces Next.js to treat this file as a client component
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Head from 'next/head';
-
+import Head from "next/head";
+import { HeroUIProvider } from "@heroui/react";
+import { Suspense, useEffect, useState } from "react";
+import Loader from "@/app/loading";
+import ThemeProvider from "@/Components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,21 +18,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Portfolio - Tariq Mehmood",
-  description: "Tariq Mehmood's Portfolio",
-  icons: {
-    icon: "/Portfolio.png",
-    shortcut: "/Portfolio.png", 
-    apple: "/Portfolio.png",    
-  },
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  useEffect(() => {
+    document.title = "Portfolio - Tariq Mehmood";
+  }, []);
+
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 6000);
+  }, []);
+
+  
   return (
     <html lang="en">
       <Head>
@@ -37,7 +46,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider>
+          <HeroUIProvider>
+          {isLoading ? <Loader /> : (
+              children
+            )}
+          </HeroUIProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
