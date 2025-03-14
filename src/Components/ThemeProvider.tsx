@@ -1,4 +1,4 @@
-"use client"; // Ensure it's a client component
+"use client";
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { useEffect, useState } from "react";
