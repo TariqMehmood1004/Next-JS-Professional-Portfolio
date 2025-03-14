@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
 import { Avatar } from "@heroui/avatar";
 import {Button} from "@heroui/button";
 import React from "react";
-
+import Link from 'next/link'
 
 export default function UserCard() {
   const [isFollowed, setIsFollowed] = React.useState(false);
@@ -39,27 +39,27 @@ export default function UserCard() {
       </CardBody>
       <CardFooter className="gap-3">
         <div className="flex gap-1">
-          <a href="https://github.com/TariqMehmood1004"
+          <Link href="https://github.com/TariqMehmood1004"
             className="bg-slate-800 text-white text-sm border-default-200 px-4 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-default-400 hover:text-default-400 hover:border-default-400"
             target="_blank" 
             rel="noopener noreferrer"
           >
             GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/tariq-mehmood-3ab013254/"
+          </Link>
+          <Link href="https://www.linkedin.com/in/tariq-mehmood-3ab013254/"
             className="bg-slate-800 text-white text-sm border-default-200 px-4 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-default-400 hover:text-default-400 hover:border-default-400"
             target="_blank" 
             rel="noopener noreferrer"
           >
             LinkedIn
-          </a>
-          <a href="https://www.figma.com/@tariqmehmood/"
+          </Link>
+          <Link href="https://www.figma.com/@tariqmehmood/"
             className="bg-slate-800 text-white text-sm border-default-200 px-4 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-default-400 hover:text-default-400 hover:border-default-400"
             target="_blank" 
             rel="noopener noreferrer"
           >
             Figma Community
-          </a>
+          </Link>
         </div>
       </CardFooter>
     </Card>

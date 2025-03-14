@@ -29,6 +29,8 @@
 
 html,
 body {
+  width: 100%;
+  height: 100%;
   background: var(--primary);
   color: var(--foreground);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, var(--font-geist-sans);
@@ -36,11 +38,18 @@ body {
 
 /* Default Light Theme */
 body {
-  @apply bg-[var(--secondary)] text-black;
+  @apply bg-[var(--background)] text-white;
 
   /* animation and transition */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* #background-image {
+  background-image: url("/tariq-mehmood/john.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
 
 /* Dark Mode */
 .dark body {
