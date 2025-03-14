@@ -2,6 +2,7 @@
 
 import DownRightArrowIcon from "@/Components/Icons/DownRightArrowIcon";
 import ThemeSwitcher from "@/Components/ThemeToggleButton";
+import { Button } from "@heroui/react";
 
 export default function Home() {
   return (
