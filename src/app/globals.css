@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
 
 :root {
@@ -12,6 +13,7 @@
   --yellow: #FFAF00;
   --dark: #171717;
 }
+
 
 @theme inline {
   --color-background: var(--primary);
@@ -38,7 +40,7 @@ body {
 
 /* Default Light Theme */
 body {
-  @apply bg-[var(--background)] text-white;
+  @apply bg-[var(--background)] text-[var(--foreground)];
 
   /* animation and transition */
   transition: background-color 0.3s ease, color 0.3s ease;
