@@ -2,7 +2,7 @@
 
 import DownRightArrowIcon from "@/Components/Icons/DownRightArrowIcon";
 import ThemeSwitcher from "@/Components/ThemeToggleButton";
-import { Button } from "@heroui/react";
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -10,9 +10,9 @@ export default function Home() {
       <section className="">
         <header className="w-full p-8 flex justify-between items-center">
           
-          <a href="/" className="text-4xl font-medium text-neutral-600 hover:text-neutral-800 transition-all duration-300 uppercase">
+          <Link href="/" className="text-4xl font-medium text-neutral-600 hover:text-neutral-800 transition-all duration-300 uppercase">
             johnbrrighte@engineer.com
-          </a>
+          </Link>
 
           <div className="text-3xl p-3 px-6 flex gap-10 items-center font-normal text-neutral-500 hover:text-neutral-600 transition-all duration-300 uppercase">
             <DownRightArrowIcon size={32} color="#cdcdcd" />
