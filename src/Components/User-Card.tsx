@@ -9,13 +9,14 @@ export default function UserCard() {
   const [isFollowed, setIsFollowed] = React.useState(false);
 
   return (
-    <Card className="shadow-xl hidden group-hover:block w-full group-hover:transition-all group-hover:duration-300 md:w-[440px] absolute top-22 left-12 bg-[var(--primary)] p-3 rounded-lg text-white">
+    <Card className="shadow-xl hidden group-hover:block w-full group-hover:transition-all group-hover:duration-300 md:w-[500px] absolute top-22 left-12 bg-[var(--primary)] p-3 rounded-lg text-white">
       <CardHeader className="justify-between">
         <div className="flex gap-5">
           <Avatar
             isBordered
             radius="full"
-            size="md"
+            size="sm"
+            className="w-20 h-20"
             src={"./Portfolio.png" }
           />
           <div className="flex flex-col gap-1 items-start justify-center">
@@ -24,7 +25,7 @@ export default function UserCard() {
           </div>
         </div>
         <Button
-          className={isFollowed ? "bg-slate-800 text-white text-sm border-default-200 px-4 py-2" : "bg-blue-800 text-white text-sm border-default-200 px-4 py-2"}
+          className={isFollowed ? "w-fit bg-slate-800 text-white text-sm border-default-200 px-4 py-2" : "w-fit bg-blue-800 text-white text-sm border-default-200 px-4 py-2"}
           color="primary"
           radius="full"
           size="sm"
