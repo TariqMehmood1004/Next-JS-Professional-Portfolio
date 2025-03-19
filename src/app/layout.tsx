@@ -26,6 +26,17 @@ export default function RootLayout({
 
   useEffect(() => {
     document.title = "Portfolio - Tariq Mehmood";
+
+    // Dynamically set the theme color for the status bar
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute("content", "#272727");
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "theme-color";
+      meta.content = "#272727";
+      document.head.appendChild(meta);
+    }
   }, []);
 
 
