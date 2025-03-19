@@ -43,6 +43,7 @@ export default function RootLayout({
       <Head>
         <link rel="icon" href="/Portfolio.png" sizes="any" />
         <meta name="theme-color" content="#272727" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#272727" />
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased px-5 md:px-0 overflow-x-hidden`}
