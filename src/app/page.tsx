@@ -29,7 +29,7 @@ export default function Home() {
       <section>
         <header className="w-full p-8 flex md:flex-row flex-col justify-between items-center gap-10">
           <div className="w-full flex flex-col md:flex-row gap-10 items-center">
-            <MenuToggleButton />
+            <div className="w-full md:w-fit flex justify-end items-center"><MenuToggleButton /></div>
             <Link
               href="/"
               className="text-lg transition-all duration-300 md:text-4xl font-medium text-neutral-600 hover:text-[#474747] uppercase"
