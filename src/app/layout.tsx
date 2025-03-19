@@ -5,7 +5,6 @@ import "./globals.css";
 import Head from "next/head";
 import { HeroUIProvider } from "@heroui/react";
 import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
 import Loader from "@/app/loading";
 import ThemeProvider from "@/Components/ThemeProvider";
 
@@ -25,12 +24,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const { theme } = useTheme(); // Get the current theme mode
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
+    useEffect(() => {
     document.title = "Portfolio - Tariq Mehmood";
+
+    // Dynamically set the theme color for the status bar
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute("content", "#272727");
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "theme-color";
+      meta.content = "#272727";
+      document.head.appendChild(meta);
+    }
   }, []);
+
+
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
@@ -38,20 +48,6 @@ export default function RootLayout({
     }, 3000);
   }, []);
 
-  useEffect(() => {
-    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-
-    const themeColor = theme === "dark" ? "#272727" : "#ffffff"; // Set color based on theme
-
-    if (metaThemeColor) {
-      metaThemeColor.setAttribute("content", themeColor);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "theme-color";
-      meta.content = themeColor;
-      document.head.appendChild(meta);
-    }
-  }, [theme]); // Run when theme changes
   
   return (
     <html lang="en">
