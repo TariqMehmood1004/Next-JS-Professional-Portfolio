@@ -2,11 +2,27 @@
 "use client";
 import { motion } from "framer-motion";
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import UserCard from "../Components/User-Card";
 
 const Loader = () => {
+
+  useEffect(() => {
+    document.title = "Loading...";
+
+    // Dynamically set the theme color for the status bar
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute("content", "#FFAF00");
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "theme-color";
+      meta.content = "#FFAF00";
+      document.head.appendChild(meta);
+    }
+  }, []);
+  
   return (
     <section className='fixed top-0 left-0 p-0 md:p-16 w-full h-full bg-[var(--primary)] z-50 flex items-center justify-center'>
         <div className='relative w-full h-full bg-[var(--yellow)] md:rounded-4xl md:p-12'>
