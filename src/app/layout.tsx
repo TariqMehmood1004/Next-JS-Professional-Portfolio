@@ -1,10 +1,10 @@
-"use client"; // 👈 Forces Next.js to treat this file as a client component
+"use client"; 
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
 import { HeroUIProvider } from "@heroui/react";
 import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import Loader from "@/app/loading";
 import ThemeProvider from "@/Components/ThemeProvider";
 
@@ -20,50 +20,38 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-
-    useEffect(() => {
-    document.title = "Portfolio - Tariq Mehmood";
-
-    // Dynamically set the theme color for the status bar
-    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    if (metaThemeColor) {
-      metaThemeColor.setAttribute("content", "#272727");
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "theme-color";
-      meta.content = "#272727";
-      document.head.appendChild(meta);
-    }
-  }, []);
-
-
+}: Readonly<{ children: React.ReactNode }>) {
+  const { theme } = useTheme();
   const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    document.title = "Portfolio - Tariq Mehmood";
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
-  }, []);
 
-  
+      // Jab loader complete ho jaye, tab wapas theme color set karein
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute("content", theme === "dark" ? "#272727" : "#ffffff");
+      }
+    }, 3000);
+  }, [theme]);
+
   return (
     <html lang="en">
-      <Head>
+      <head>
         <link rel="icon" href="/Portfolio.png" sizes="any" />
-        <meta name="theme-color" content="#272727" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="#272727" />
-      </Head>
+        <meta name="theme-color" content={isLoading ? "#FFAF00" : theme === "dark" ? "#272727" : "#ffffff"} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased px-5 md:px-0 overflow-x-hidden`}
       >
         <ThemeProvider>
           <HeroUIProvider>
-          {isLoading ? <Loader /> : (
-              children
-            )}
+            {isLoading ? <Loader /> : children}
           </HeroUIProvider>
         </ThemeProvider>
       </body>
