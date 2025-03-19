@@ -42,6 +42,7 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <link rel="icon" href="/Portfolio.png" sizes="any" />
+        <meta name="theme-color" content="#272727" />
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased px-5 md:px-0 overflow-x-hidden`}
