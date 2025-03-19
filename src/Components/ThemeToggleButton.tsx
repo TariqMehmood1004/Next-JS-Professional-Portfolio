@@ -1,6 +1,8 @@
 "use client";
 import { Button } from "@heroui/react";
 import { useTheme } from "next-themes";
+import IdeaIcon from "./Icons/IdeaIcon";
+import BulbIcon from "./Icons/BulbIcon";
 
 export default function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
@@ -12,8 +14,12 @@ export default function ThemeSwitcher() {
         className="rounded-full bg-[var(--hover)] dark:bg-[var(--primary)] dark:text-white text-white hover:bg-[var(--hover)] hover:text-white transition-all duration-300 outline-none border-none w-20 h-20 flex items-center justify-center text-center"
       >
         { theme === "dark" ? 
-            <h3 className="text-white">Light</h3> 
-            : <h3 className="text-white">Dark</h3> 
+            <h3 className="text-white">
+              <BulbIcon />
+            </h3> 
+            : <h3 className="text-white">
+              <IdeaIcon />
+            </h3> 
         }
       </Button>
     </div>
