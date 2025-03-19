@@ -17,7 +17,6 @@ const pageVariants = {
 export default function Home() {
 
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
-  const toggleImageModal = () => setIsImageModalOpen(!isImageModalOpen);
 
   return (
     <motion.div

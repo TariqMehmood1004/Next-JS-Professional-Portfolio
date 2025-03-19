@@ -1,7 +1,5 @@
 import { Button } from "@heroui/react";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import React from "react";
 import AnimatedLinks from "./AnimatedLinks";
 
 const drawerVariants = {
