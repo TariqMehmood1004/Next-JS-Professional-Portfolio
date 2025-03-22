@@ -8,6 +8,7 @@ import Image from "next/image";
 import MenuToggleButton from "@/Components/MenuToggleButton";
 import { useState } from "react";
 import ImagePreviewModal from "@/Components/ImagePreviewModal";
+import Profession from "@/Components/Profession";
 
 const pageVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -24,8 +25,9 @@ export default function Home() {
       animate="visible"
       exit="hidden"
       variants={pageVariants}
-      className="w-full md:h-screen font-[family-name:var(--font-geist-sans)] flex flex-col gap-8"
-    >
+      className="w-full md:h-screen font-[family-name:var(--font-geist-sans)] flex flex-col gap-8">
+
+      
       <section>
         <header className="w-full p-8 flex md:flex-row flex-col justify-between items-center gap-10">
           <div className="w-full flex flex-col md:flex-row gap-10 items-center">
@@ -75,7 +77,7 @@ export default function Home() {
         </Link>
         <Link
           target="_blank"
-          href="https://www.linkedin.com/in/tariq-mehmood-3ab013254/"
+          href="https://raw.githubusercontent.com/TariqMehmood1004/my-resume/main/Resume%20-%20Tariq%20Mehmood.pdf"
           className="absolute left-8 md:left-[50%] top-60 md:top-50 text-lg md:text-4xl border-2 border-[#171717] rounded-lg p-4 px-6 font-medium bg-[#272727] text-white hover:bg-[#373737] hover:text-white transition-all duration-300 uppercase"
         >
           Download Resume
@@ -128,6 +130,8 @@ export default function Home() {
           )}
         </div>
       </motion.section>
+
+      <Profession />
     </motion.div>
   );
 }

@@ -50,3 +50,21 @@ body {
   /* animation and transition */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+
+* {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+*::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+.remove-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.remove-scrollbar::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}

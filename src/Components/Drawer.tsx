@@ -11,7 +11,7 @@ const drawerVariants = {
 const Drawer = ({ isOpen, toggleMenu }: { isOpen: boolean; toggleMenu: () => void }) => {
   return (
     <motion.div
-      className="fixed top-0 left-0 w-full h-full md:w-screen md:h-screen bg-[#171717] z-50 shadow-lg md:shadow-none overflow-y-auto"
+      className="fixed top-0 left-0 w-full h-full flex items-center justify-center md:w-screen md:h-screen bg-[#171717] z-50 shadow-lg md:shadow-none overflow-y-auto remove-scrollbar"
       initial="hidden"
       animate={isOpen ? "visible" : "hidden"}
       exit="exit"

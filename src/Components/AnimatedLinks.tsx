@@ -27,7 +27,7 @@ const links = [
 
 export default function AnimatedLinks() {
   return (
-    <div className="p-4 text-white w-full h-full py-10 flex flex-col justify-center items-center space-y-8 md:space-y-12">
+    <div className="p-4 text-white w-full overflow-y-auto remove-scrollbar py-10 flex flex-col justify-center items-center space-y-8 md:space-y-12">
       {links.map((text, i) => (
         <motion.div
           key={text}
