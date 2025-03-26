@@ -10,8 +10,6 @@
 !.yarn/releases
 !.yarn/versions
 
-/src/app/api/
-/src/app/api/*
 
 # testing
 /coverage
@@ -42,3 +40,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+/src/app/api
