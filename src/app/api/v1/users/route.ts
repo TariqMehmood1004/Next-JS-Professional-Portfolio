@@ -92,8 +92,7 @@ export async function POST(request: NextRequest) {
     const savedUser = await newUser.save();
 
     // Send OTP email in the background (don't wait for it)
-    sendOtpEmail(savedUser.email, otp.toString(), otpExpiresAt)
-      .catch((err) => console.error("Email sending failed:", err));
+    sendOtpEmail(savedUser.email, otp.toString(), otpExpiresAt);;
 
     return APIResponseHandler.HTTP_201_CREATED(savedUser, "Verify the 6-digits one-time paasword that we sent to you.");
   } catch (error) {
