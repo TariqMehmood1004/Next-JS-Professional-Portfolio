@@ -2,7 +2,7 @@
 import APIResponseHandler from "@/Helpers/ApiResponseHandler"
 import { NextResponse, NextRequest } from "next/server"
 
-export function GET(request: NextRequest, response: NextResponse) {
+export default async function GET(request: NextRequest, response: NextResponse) {
   const data = [{
     "id": 1,
     "user": "user_id here",
