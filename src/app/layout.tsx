@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -44,6 +44,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/Portfolio.png" sizes="any" />
+        <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
         <meta name="theme-color" content={isLoading ? "#FFAF00" : theme === "dark" ? "#272727" : "#272727"} />
       </head>
       <body
