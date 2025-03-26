@@ -31,7 +31,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // GET Records
-export async function GET(request: NextRequest, response: NextResponse) {
+export async function GET(request: NextRequest, response: NextResponse): Promise<NextResponse> {
   await connectDatabase();
 
   try {
@@ -43,7 +43,7 @@ export async function GET(request: NextRequest, response: NextResponse) {
 }
 
 // POST Records
-export async function POST(request: NextRequest) {
+export async function POST(request: NextRequest): Promise<NextResponse> {
   await connectDatabase();
 
   const formData = await request.formData();
