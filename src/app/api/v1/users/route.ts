@@ -1,6 +1,6 @@
 
 import APIResponseHandler from "@/Helpers/ApiResponseHandler";
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { hash } from "bcryptjs";
 import User from "@/app/Schemas/UserSchema";
 import generateOtp from "@/app/Utils/OtpGenerator";
@@ -8,7 +8,6 @@ import multer from "multer";
 import fs from "fs";
 import path from "path";
 import { connectDatabase } from "@/config/db";
-import slugify from "slugify";
 import { sendOtpEmail } from "@/app/Utils/emailService";
 
 // Configure Multer for file uploads
@@ -31,7 +30,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // GET Records
-export async function GET(request: NextRequest, response: NextResponse): Promise<NextResponse> {
+export async function GET(request: NextRequest) {
   await connectDatabase();
 
   try {
@@ -43,7 +42,7 @@ export async function GET(request: NextRequest, response: NextResponse): Promise
 }
 
 // POST Records
-export async function POST(request: NextRequest): Promise<NextResponse> {
+export async function POST(request: NextRequest) {
   await connectDatabase();
 
   const formData = await request.formData();
