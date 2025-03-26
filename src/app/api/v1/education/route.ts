@@ -1,7 +1,7 @@
-import APIResponseHandler from "@/Helpers/ApiResponseHandler"
-import { NextRequest } from "next/server"
+import APIResponseHandler from "@/Helpers/ApiResponseHandler";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(request: NextRequest) {
+export async function GET(request: NextRequest): Promise<NextResponse> {
   const data = [
     {
       id: 1,
