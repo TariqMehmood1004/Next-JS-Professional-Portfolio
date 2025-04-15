@@ -68,3 +68,16 @@ body {
 .remove-scrollbar::-webkit-scrollbar { 
   display: none;  /* Safari and Chrome */
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: scroll 40s linear infinite;
+}

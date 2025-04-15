@@ -8,10 +8,10 @@ interface DescriptionModalProps {
   fullDescription: string;
 }
 
-export default function DescriptionModal({ 
-  title = "", 
-  shortDescription, 
-  fullDescription 
+export default function DescriptionModal({
+  title = "",
+  shortDescription,
+  fullDescription
 }: DescriptionModalProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -20,7 +20,7 @@ export default function DescriptionModal({
   return (
     <>
       {/* Shortened Text with Read More Link */}
-      <p className="w-full text-sm md:text-2xl text-center md:text-left font-normal px-0 md:px-10">
+      <p className="w-full text-sm md:text-2xl text-left font-normal px-0 md:px-10">
         {shortDescription}
         <Link href="#" onClick={toggleModal} className="text-bold italic text-indigo-600 hover:underline m-2 transition-all duration-300">
           Read more
@@ -36,7 +36,7 @@ export default function DescriptionModal({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <motion.div 
+            <motion.div
               className="bg-white rounded-lg p-5 md:p-10 w-11/12 md:w-1/2 shadow-lg relative"
               initial={{ y: "-50%", opacity: 0 }}
               animate={{ y: "0%", opacity: 1 }}
