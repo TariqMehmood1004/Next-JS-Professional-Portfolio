@@ -49,30 +49,50 @@ body {
 
   /* animation and transition */
   transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+  box-shadow: none;
+}
+
+.dark .my-card {
+  @apply bg-[var(--primary)] text-white;
+  border: 2px solid #0f0f0f;
+  box-shadow: none;
+}
+
+.dark .my-card:hover {
+  @apply bg-[#0f0f0f] text-white;
 }
 
 
 * {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
-*::-webkit-scrollbar { 
-  display: none;  /* Safari and Chrome */
+*::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
 }
 
 .remove-scrollbar {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
 }
-.remove-scrollbar::-webkit-scrollbar { 
-  display: none;  /* Safari and Chrome */
+
+.remove-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
 }
 
 @keyframes scroll {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }

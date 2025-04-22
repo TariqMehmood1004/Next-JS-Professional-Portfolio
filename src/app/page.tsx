@@ -1,7 +1,9 @@
-import CompanyCarousal from "@/Components/CompanyCarousal";
-import Features from "@/Components/Features";
 import Home from "@/Components/Home";
 import Profession from "@/Components/Profession";
+import CompanyCarousal from "@/Components/CompanyCarousal";
+import Features from "@/Components/Features";
+import TumigoDownloadSteps from "@/Components/TumigoDownloadSteps";
+import TechnologiesClient from "@/Components/TechnologiesClient";
 
 
 export default function Page() {
@@ -11,6 +13,8 @@ export default function Page() {
       <Profession />
       <CompanyCarousal />
       <Features />
+      <TumigoDownloadSteps />
+      <TechnologiesClient />
     </>
   );
 }

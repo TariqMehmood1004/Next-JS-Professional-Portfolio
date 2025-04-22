@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Features = () => {
     return (
-        <section className="w-full md:h-screen md:px-40">
+        <section className="w-full md:px-40">
             <motion.div
                 initial="hidden"
                 animate="visible"
@@ -132,7 +132,6 @@ const Features = () => {
                         </div>
                     </div>
                 </motion.section>
-
 
                 <motion.section
                     initial={{ opacity: 0, x: -50 }}
