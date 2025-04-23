@@ -63,6 +63,48 @@ body {
   @apply bg-[#0f0f0f] text-white;
 }
 
+.dark .tumigo-download-steps {
+  @apply bg-[var(--dark)]/50 text-white;
+}
+
+.light .tumigo-download-steps {
+  @apply bg-[var(--dark)]/5;
+}
+
+.dark .tumigo-download-steps .my-card {
+  @apply bg-[var(--dark)]/60 text-white;
+  border: none;
+  box-shadow: none;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+
+.light .tumigo-download-steps .my-card {
+  @apply bg-[var(--dark)]/5;
+  border: none;
+  box-shadow: none;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+
+.light .tumigo-download-steps .my-card:hover {
+  @apply bg-[var(--dark)]/10;
+}
+
+.dark .company-carousal {
+  @apply bg-[var(--dark)]/50 text-white;
+}
+
+
+.light .company-carousal {
+  @apply bg-[var(--dark)]/3;
+}
+
+
+.dark .tumigo-download-steps .my-card:hover {
+  @apply bg-[var(--dark)]/80;
+}
+
 
 * {
   -ms-overflow-style: none;

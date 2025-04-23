@@ -2,7 +2,7 @@
 
 const TumigoDownloadSteps = () => {
     return (
-        <section className="w-full md:px-20 py-42">
+        <section className="w-full md:px-20 py-42 tumigo-download-steps">
             <h1 className="w-full text-4xl md:text-5xl font-bold mb-4">How to download Tumigo?</h1>
             <p className="w-full text-lg mb-4">Follow these steps to download Tumigo:</p>
             <ol className="w-full overflow-hidden grid grid-cols-1 md:grid-cols-3 gap-4">

@@ -20,7 +20,7 @@ const logos = [
 
 const CompanyCarousal = () => {
     return (
-        <main className="relative flex flex-col justify-center overflow-hidden">
+        <main className="company-carousal relative flex flex-col justify-center overflow-hidden">
             <div className="w-full container mx-auto px-4 md:px-6 py-24 min-h-[200px]">
                 <div className="text-center">
                     <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_32px,_black_calc(100%-32px),transparent_100%)] md:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
