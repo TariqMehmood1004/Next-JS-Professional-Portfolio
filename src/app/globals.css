@@ -105,6 +105,12 @@ body {
   @apply bg-[var(--dark)]/80;
 }
 
+.dark .clients-t1 {
+  @apply text-indigo-600;
+  @apply font-bold;
+}
+
+
 
 * {
   -ms-overflow-style: none;
