@@ -304,7 +304,7 @@ const techs = [
 
 const ProjectsClient = () => {
 
-    const [selectedTech, setSelectedTech] = useState(null);
+    const [selectedTech, setSelectedTech] = useState<string | null>(null);
     const [filteredProjects, setFilteredProjects] = useState(projects);
 
     useEffect(() => {
@@ -353,8 +353,7 @@ const ProjectsClient = () => {
                         {/* Add 'All' button to reset filter */}
                         <Button
                             className="cursor-pointer bg-[#E7E7E7] text-black font-medium text-sm md:text-2xl rounded-full px-4 py-2 hover:bg-indigo-600 hover:text-white transition-all duration-300 ease-in-out"
-                            onClick={() => setSelectedTech(null)}
-                        >
+                            onClick={() => setSelectedTech(null)}>
                             All
                         </Button>
 
